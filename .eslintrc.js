@@ -8,7 +8,7 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "jsx-a11y/recommended",// Avoid parsing error: unexpected token export default `const` App = () => {...}
+        "jsx-a11y",
         "import"
     ],
     "rules": {
@@ -18,7 +18,7 @@ module.exports = {
         "react/jsx-indent": [2, "tab"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "no-console": 0,
-        "arrow-body-style": ["error", "always"]
+        "arrow-body-style": ["error", "always"],
+        "react/no-unknown-property": [2, { "ignore": ["class", "for"] }] // thanks to babel-plugin-react-html-attrs, class auto-transform into className in jsx
     }
 };
-	
